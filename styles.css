@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+textarea {
+    color: hsl(0, 77%, 85%);
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+    margin-left: auto;
+    margin-right:auto ;
+}
+section,article{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
