@@ -34,10 +34,9 @@ botondos.addEventListener("click", () => {
 
   }
 //   console.log("cambia las vocales", texto)
-const msjEncriptado = document.querySelector("#textoMostrado")
-
-msjEncriptado
-
-
-   
+let msjEncriptado = document.querySelector("#textoMostrado")
+console.log(msjEncriptado)
+msjEncriptado.innerHTML = texto
+let msjEncontrado = document.querySelector('h2')
+msjEncontrado.innerHTML = "Mensaje Encontrado "
 });
