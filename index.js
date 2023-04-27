@@ -5,11 +5,8 @@
 const botondos = document.getElementById("encriptar")
 botondos.addEventListener("click", () => {
 
-  var input = document.getElementById("texto");
-  var valor = input.value;
-
-  // alert("El valor del campo es: " + valor);
-
+  let input = document.getElementById("texto");
+  let valor = input.value.toLowerCase()
 
   let texto = ""
   for (let i = 0; i < valor.length; i++) {
@@ -33,10 +30,21 @@ botondos.addEventListener("click", () => {
     }
 
   }
-//   console.log("cambia las vocales", texto)
-let msjEncriptado = document.querySelector("#textoMostrado")
-console.log(msjEncriptado)
-msjEncriptado.innerHTML = texto
-let msjEncontrado = document.querySelector('h2')
-msjEncontrado.innerHTML = "Mensaje Encontrado "
+  //   console.log("cambia las vocales", texto)
+  let msjEncriptado = document.querySelector("#textoMostrado")
+  console.log(msjEncriptado)
+  msjEncriptado.innerHTML = texto
+  let msjEncontrado = document.querySelector('h2')
+  msjEncontrado.innerHTML = "Mensaje Encontrado"
+
+  //Desencriptar 
+  const btndesencriptar = document.getElementById('desencriptar')
+
+  btndesencriptar.addEventListener("click", () => {
+    msjEncriptado.innerHTML = valor
+
+  })
+
+
 });
+
