@@ -30,21 +30,23 @@ botondos.addEventListener("click", () => {
     }
 
   }
+  
+  document.querySelector(".muñeco").style.display= "block"
   //   console.log("cambia las vocales", texto)
   let msjEncriptado = document.querySelector("#textoMostrado")
-  console.log(msjEncriptado)
+  
   msjEncriptado.innerHTML = texto
   let msjEncontrado = document.querySelector('h2')
   msjEncontrado.innerHTML = "Mensaje Encontrado"
 
   //Desencriptar 
   const btndesencriptar = document.getElementById('desencriptar')
-
+  
   btndesencriptar.addEventListener("click", () => {
     msjEncriptado.innerHTML = valor
-
+    document.querySelector(".muñeco").style.display="none"
   })
 
-
+  
 });
 
