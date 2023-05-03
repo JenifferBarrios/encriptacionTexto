@@ -7,7 +7,7 @@ botondos.addEventListener("click", () => {
 
   let input = document.getElementById("texto");
   let valor = input.value.toLowerCase()
-
+  if(valor !== ""){
   let texto = ""
   for (let i = 0; i < valor.length; i++) {
     // console.log("que trae la i", valor[i])
@@ -31,6 +31,7 @@ botondos.addEventListener("click", () => {
 
   }
   
+      
   document.querySelector(".muñeco").style.display= "block"
   //   console.log("cambia las vocales", texto)
   let msjEncriptado = document.querySelector("#textoMostrado")
@@ -38,7 +39,7 @@ botondos.addEventListener("click", () => {
   msjEncriptado.innerHTML = texto
   let msjEncontrado = document.querySelector('h2')
   msjEncontrado.innerHTML = "Mensaje Encontrado"
-
+  
   //Desencriptar 
   const btndesencriptar = document.getElementById('desencriptar')
   
@@ -46,7 +47,8 @@ botondos.addEventListener("click", () => {
     msjEncriptado.innerHTML = valor
     document.querySelector(".muñeco").style.display="none"
   })
-
-  
+}else {
+  alert("Escribe tu mensaje")
+}
 });
 
